@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "model_id": "faster-whisper-tiny",
+      "name": "Whisper Tiny (multilingual)",
+      "required": true,
+      "license": "MIT",
+      "revision": "d90ca5fe260221311c53c58e660288d3deb8d356",
+      "install_subdir": "whisper/faster-whisper-tiny",
+      "files": [
+        {
+          "name": "config.json"
+        },
+        {
+          "name": "model.bin"
+        },
+        {
+          "name": "tokenizer.json"
+        },
+        {
+          "name": "vocabulary.txt"
+        }
+      ],
+      "base_url": "https://huggingface.co/Systran/faster-whisper-tiny/resolve/d90ca5fe260221311c53c58e660288d3deb8d356/"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+# Install PyTorch separately for the required CPU or CUDA platform first.
+-e .[ai]

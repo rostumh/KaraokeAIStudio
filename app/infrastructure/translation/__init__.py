@@ -1,0 +1,1 @@
+"""Offline lyrics translation adapters."""

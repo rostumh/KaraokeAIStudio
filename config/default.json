@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "application": {
+    "name": "Karaoke AI Studio",
+    "organization": "KaraokeAIStudio",
+    "version": "0.27.2"
+  },
+  "appearance": {
+    "theme": "dark",
+    "language": "en-US"
+  },
+  "logging": {
+    "level": "INFO",
+    "max_bytes": 5242880,
+    "backup_count": 5
+  },
+  "database": {
+    "filename": "karaoke_ai_studio.sqlite3"
+  }
+}

@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "karaoke-ai-studio"
+version = "0.29.2"
+description = "Production-ready foundation for Karaoke AI Studio"
+readme = "README.md"
+requires-python = ">=3.11,<3.15"
+license = {text = "Proprietary"}
+authors = [{name = "Karaoke AI Studio Team"}]
+dependencies = [
+  "PySide6>=6.8,<7",
+  "platformdirs>=4.3,<5",
+  "requests>=2.32,<3",
+  "huggingface-hub>=0.34,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3,<10",
+  "pytest-cov>=6,<8",
+  "ruff>=0.9,<1",
+  "mypy>=1.14,<2",
+  "PyInstaller>=6.12,<7",
+]
+
+ai = [
+  "demucs>=4.1,<5",
+]
+
+asr = [
+  "faster-whisper>=1.2,<2",
+]
+translation = [
+  "argostranslate>=1.11,<2",
+]
+
+[project.scripts]
+karaoke-ai-studio = "app.bootstrap:main"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra --strict-markers --strict-config"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unreachable = true
+exclude = ["build", "dist", ".venv"]
